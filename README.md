@@ -5,32 +5,39 @@
 1. Клонируйте репозиторий:
     
     git clone https://github.com/Denoff13333/apache-log-aggregator.git
+   
     cd C:\Users\Denil\apache\apache-log-aggregator
     
 
-2. Установите виртуальное окружение и зависимости:
+3. Установите виртуальное окружение и зависимости:
     
     python3 -m venv venv
+   
     Set-ExecutionPolicy RemoteSigned -Scope Process
+   
     venv\Scripts\activate
+   
     pip install -r requirements.txt
-    ```
+    
 
-3. Настройте конфигурацию в `C:\Users\Denil\apache\apache-log-aggregator\config/settings.py`.
+5. Настройте конфигурацию в `C:\Users\Denil\apache\apache-log-aggregator\config/settings.py`.
 
-4. Инициализируйте базу данных:
+6. Инициализируйте базу данных:
     
     flask db init
+   
     flask db migrate
+   
     flask db upgrade
-    ```
-
-5. Запустите парсинг логов:
-    
-    python scripts/parse_logs.py
     
 
-6. Запустите сервер:
+8. Запустите парсинг логов:
+    
+    python parse_logs.py
+    
+( Надо находиться в нужной дериктории )
+
+9. Запустите сервер:
     
     flask run
     
